@@ -1,0 +1,21 @@
+Circuit: * C:\Users\Samuel\Documents\CodingProjects\Arduino\in_progress\TachFilter\filter_design.asc
+
+.OP point found by inspection.
+
+Date: Sat Aug 08 16:12:45 2020
+Total elapsed time: 0.087 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2344
+traniter = 2344
+tranpoints = 1173
+accept = 1137
+rejected = 36
+matrix size = 3
+fillins = 0
+solver = Normal
+Matrix Compiler1:       3 opcodes  0.1/[0.1]/0.1
+Matrix Compiler2: 175 bytes object code size  0.1/0.1/[0.1]
+
