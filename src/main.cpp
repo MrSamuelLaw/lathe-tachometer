@@ -126,7 +126,7 @@ void loop()
 		Lcd.print(rpm);
 		Lcd.print(TRAILING_WHITESPACE);
 	
-		Sum -= Head->value + rpm;  // update the sum
+		Sum += rpm - Head->value;  // update the sum
 
 		// update the linked list
 		Head->value = rpm;
