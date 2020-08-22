@@ -26,7 +26,7 @@ typedef struct Node{int value; struct Node* next;} Node;  // node of Linked-List
 
 #define TRAILING_WHITESPACE "     "  // pace to override possible chars (MAX considered len: 11 chars)
 constexpr int VIN{8};  // pin to read sensor from
-constexpr uint8_t PERIOD_LOWER_LIMIT{40};  // minimum time between high-low to do calculations
+constexpr uint32_t PERIOD_UPPER_LIMIT{1.5e6};  // maximum time between high-low (other wise motor too slow)
 constexpr unsigned long TIMEOUT = 3.5e6;  // time input pin listens before timeouts
 constexpr uint8_t LIST_SIZE{10};  // number of nodes in LL
 constexpr uint8_t STD_LIMIT{60};  // highest deviation (acceleration) before directionality should be checked
@@ -116,7 +116,7 @@ void loop()
 	Lcd.setCursor(0, 0);
 	// if on only one of the outputs bounced or rpm is below limit
 	// trailing whitespace to override possible chars (MAX considered len:11 chars)
-	if(period && period < PERIOD_LOWER_LIMIT) Lcd.print("RPM: < 40  ");
+	if(period && PERIOD_UPPER_LIMIT < period) Lcd.print("RPM: < 40  ");
 	else
 	{
 		if(period) rpm = 6e7 / period;  // prevent 0 denominator division
