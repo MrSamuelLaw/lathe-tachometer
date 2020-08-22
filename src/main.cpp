@@ -27,7 +27,7 @@ typedef struct Node{int value; struct Node* next;} Node;  // node of Linked-List
 #define TRAILING_WHITESPACE "     "  // pace to override possible chars (MAX considered len: 11 chars)
 constexpr int VIN{8};  // pin to read sensor from
 constexpr uint32_t PERIOD_UPPER_LIMIT{1.5e6};  // maximum time between high-low (other wise motor too slow)
-constexpr unsigned long TIMEOUT = 3.5e6;  // time input pin listens before timeouts
+constexpr unsigned long TIMEOUT{3.5e6};  // time input pin listens before timeouts
 constexpr uint8_t LIST_SIZE{10};  // number of nodes in LL
 constexpr uint8_t STD_LIMIT{60};  // highest deviation (acceleration) before directionality should be checked
 constexpr uint8_t ARDUINO_DELAY{50};  // pause between measurements
