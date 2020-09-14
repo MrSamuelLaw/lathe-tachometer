@@ -1,0 +1,32 @@
+Wire List
+
+                                              Revised: Friday, August 28, 2020
+                                              Revision: A
+LINEAR TECHNOLOGY
+
+
+
+
+
+
+<<< Component List >>>
+PULSE(0 5 0 1e-6 1e-6 3m 17m 50)V1        voltage
+5k                            R1        res
+100n                          C1        cap
+
+<<< Wire List >>>
+
+  NODE  REFERENCE    PIN #   PIN NAME           PIN TYPE       PART VALUE
+
+[00001] N001
+        V1              1       +               Passive        PULSE(0 5 0 1e-6 1e-6 3m 17m 50)
+        R1              2       B               Passive        5k
+
+[00002] 0
+        V1              2       -               Passive        PULSE(0 5 0 1e-6 1e-6 3m 17m 50)
+        C1              1       A               Passive        100n
+
+[00003] N002
+        R1              1       A               Passive        5k
+        C1              2       B               Passive        100n
+
